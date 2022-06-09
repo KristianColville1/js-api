@@ -14,7 +14,10 @@
         .then(response => response.json())
         .then(data => {
             document.getElementById('content').innerText = data.people;
-        });
+        })
+        .catch((e) => {
+            console.error('Error: ', e);
+        })
     </script>
 </body>
 </html>
